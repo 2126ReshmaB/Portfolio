@@ -158,7 +158,7 @@ const Project = ({ title,img, link}) => {
     </article>
   )
 }
-const articles = () => {
+const Articles = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll(
     {
@@ -287,4 +287,4 @@ const articles = () => {
   )
 }
 
-export default articles;
+export default Articles;

@@ -29,8 +29,8 @@ export default function Home() {
               <AnimatedText text="Hi, I'm Reshma" className='!text-4xl !text-left
               xl:!text-3xl lg:!text-center lg:!text-4xl md:!text-3xl sm:!text-2xl font-mono' />
               
-              <p className='my-4 text-base font-medium md:text-sm sm:text-xs font-mono'>A Final-year Computer Science and Engineering student at R.M.K Engineering College and an FFE scholar, I’m passionate about full-stack and app development. I'm always learning and pushing myself to tackle new challenges.</p>
-              <p className='my-4 text-base font-medium md:text-sm sm:text-xs font-mono'>Want to see what I'm up to? Dive into my portfolio and explore my journey!</p>
+              <p className='my-4 text-base font-medium md:text-sm sm:text-xs font-mono'>A Final-year Computer Science and Engineering student at R.M.K Engineering College and an FFE scholar, I&apos;m passionate about full-stack and app development. I&apos;m always learning and pushing myself to tackle new challenges.</p>
+              <p className='my-4 text-base font-medium md:text-sm sm:text-xs font-mono'>Want to see what I&apos;m up to? Dive into my portfolio and explore my journey!</p>
           <div className="flex items-center self-start mt-2 lg:self-center">
             <Link href="/Reshma_Resume (1).pdf" target={"_blank"}
             className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
