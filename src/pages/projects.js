@@ -11,6 +11,7 @@ import project4 from "../../public/images/projects/project4.png";
 import project5 from "../../public/images/projects/project5.png";
 import project6 from "../../public/images/projects/project6.png";
 import project7 from "../../public/images/projects/project7.png";
+import Dapp from "../../public/images/projects/Dapp.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
@@ -41,26 +42,40 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
     </article>
   )
 }
-const Project = ({ title, img, link, github }) => {
+const Project = ({ title, img, link, github, summary}) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light font-mono
-    xs:p-4">
-      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl font-mono dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]' />
-      <Link href={link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-lg">
-        <FramerImage src={img} alt={title} className="w-full h-auto" whileHover={{ scale: 1.05 }} transition={{ duartion: 0.2 }} />
+    <article className="w-full flex flex-col items-center justify-center rounded-3xl border border-solid border-gray-300 bg-white p-5 relative overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:scale-105 dark:bg-gray-800 dark:border-gray-600">
+      {/* Background gradient effect */}
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-gradient-to-br from-blue-500 via-purple-600 to-pink-600 opacity-20 dark:opacity-10' />
+
+      {/* Image */}
+      <Link href={link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-2xl">
+        <FramerImage 
+          src={img} 
+          alt={title} 
+          className="w-full h-auto rounded-lg transition-transform duration-300 ease-in-out hover:scale-110"
+        />
       </Link>
-      <div className="w-full flex flex-col items-start justify-between mt-4">
-        <Link href={link} target="_blank" className="hover:underline underline-offset-2">
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">{title}</h2>
+
+      {/* Content */}
+      <div className="w-full flex flex-col items-start justify-between mt-4 space-y-3">
+        <Link href={link} target="_blank" className="text-2xl font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
+          <h2 className="my-2">{title}</h2>
         </Link>
-        <div className="w-full mt-2 flex items-center justify-between">
-          <Link href={link} target="_blank" className="font-semibold underline md:text-base hover:text-blue-500">Visit</Link>
-          <Link href={github} target="_blank" className="w-8 md:w-6"><GithubIcon /></Link>
+        
+        {/* Description */}
+        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">{summary}</p>
+
+        <div className="w-full flex items-center justify-between mt-2">
+          {/* GitHub Button */}
+          <Link href={github} target="_blank" className="w-8 md:w-6 text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-colors duration-300">
+            <GithubIcon />
+          </Link>
         </div>
       </div>
     </article>
-  )
-}
+  );
+};
 const projects = () => {
   return (
     <>
@@ -79,9 +94,7 @@ const projects = () => {
               <Project
                 img={project1}
                 title="MERN Book store Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
+                summary="This is a simple Book Store Project built using the MERN (MongoDB, Express.js, React, and Node.js) stack. This project demonstrates basic CRUD (Create, Read, Update, Delete) operations and Firebase for user authetication."
                 link="/"
                 github="https://github.com/2126ReshmaB/MERN-BOOK-APP.git"
                />
@@ -90,9 +103,7 @@ const projects = () => {
               <Project
                 img={project2}
                 title="Health Care Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
+                summary="The healthcare application developed using Android Studio to provide users with a range of essential features for managing their health and well-being. "
                 link="/"
                 github="https://github.com/2126ReshmaB/HealTech---Medical-Health-Care-Application.git"
                  />
@@ -101,20 +112,25 @@ const projects = () => {
               <Project
                 img={project3}
                 title="DSAQuestor - LeetCode Clone"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
+                summary="A DSA platform for interview preparation, built with TypeScript, Tailwind CSS, Next.js, React, and Firebase, is designed to help users practice Data Structures and Algorithms (DSA)."
                 link="https://drive.google.com/file/d/13mZulo_shpM680-yCFZZsS00Z3_XDzy6/view?usp=sharing"
                 github="https://github.com/2126ReshmaB/DSAQuestor-Coding-with-DSA-made-easy..git"
                 />
             </div>
             <div className='col-span-6 sm:col-span-12'>
               <Project
+                img={Dapp}
+                title="Dapp"
+                summary="This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract."
+                link="https://drive.google.com/file/d/13mZulo_shpM680-yCFZZsS00Z3_XDzy6/view?usp=sharing"
+                github="https://github.com/2126ReshmaB/chaiDapp.git"
+                />
+            </div>
+            <div className='col-span-6 sm:col-span-12'>
+              <Project
                 img={project4}
                 title="Amazon Clone - html and css"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
+                summary="It is a simple Amazon website developed using HTML and CSS."
                 link="/"
                 github="https://github.com/2126ReshmaB/Amazon-clone---HTML-and-CSS.git"
                  />
@@ -123,9 +139,7 @@ const projects = () => {
               <Project
                 img={project5}
                 title="Blind Supporting system"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
+                summary="This is a vision enhancer based module specifically for the BLIND VICTIMS. The system is designed in such a way in which the blind person can take the help of AN APPLICATION which inturn sends Real Time Frames to the LAPTOP-BASED WIRELESS NETWORKED SYSTEM."
                 link="/"
                 github="https://github.com/2126ReshmaB/Bling-Supporting-System-using-Tensorflow-API.git"
                  />
@@ -134,9 +148,7 @@ const projects = () => {
               <Project
                 img={project6}
                 title="ToDo List - React"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
+                summary="A simple To-do list built with React.js."
                 link="/"
                 github="https://github.com/2126ReshmaB/To-do-list.git"
               />
@@ -145,9 +157,7 @@ const projects = () => {
               <Project
                 img={project7}
                 title="CRUD API"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
+                summary="A simple CRUD API built with MERN stack without."
                 link="/"
                 github="https://github.com/2126ReshmaB/CRUD-APP.git"
               />
@@ -162,6 +172,8 @@ const projects = () => {
             <p className='font-mono'>- Postman</p>
             <p className='font-mono'>- GitHub</p>
             <p className='font-mono'>- Spyder</p>
+            <p className='font-mono'>- Remix IDE</p>
+            <p className='font-mono'>- Metamask</p>
             <p className='font-mono'>- etc.,</p>
           </div>
         </Layout>

@@ -173,11 +173,11 @@ const Articles = () => {
         <meta name="description" content="any description" />
       </Head>
       <TransitionEffect />
-      <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
+      <main className='w-full mb-13 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
         <Layout className="pt-16">
           <AnimatedText text="Competitive Coding" className="mb-1
-          lg:!text-xl sm:mb-1 sm:!text-xl xs:!text-xl font-mono" />
-          <div className='row-span-7 flex xl:flex-row items-center justify-center xl:row-span-8 md:order-3 my-6'>
+          text-6xl sm:mb-1 sm:!text-5xl xs:!text-xl font-mono font-bold" />
+          <div className='row-span-7 flex xl:flex-row items-center justify-center xl:row-span-8 md:order-3 my-8'>
             <div className='flex flex-col items-center justify-center mb-4 xl:mb-0 xl:mr-4 mx-8'>
               <span className='inline-block text-5xl md:text-4xl sm:text-3xl xs:text-2xl font-bold mr-2 font-mono'>
                 <AnimatedNumbers value={500} />+
@@ -201,30 +201,23 @@ const Articles = () => {
 
           <ul className="grid grid-cols-3 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <Project title="Leetcode"
-              link="/"
+              link="https://leetcode.com/u/Reshma-B/"
               img={profile1}
             />
             <Project title="GeeksForGeeks"
              
-              link="/"
+              link="https://www.geeksforgeeks.org/user/resh21hgw4/"
               img={profile2}
             />
              <Project title="CodingNinjas"
-              link="/"
+              link="https://www.naukri.com/code360/profile/b2ebf1c7-0c99-4de8-9022-21b733507676"
               img={profile3}
             />
           </ul>
-          <div className='grid w-full h-full grid-cols-8 gap-16 sm:gap-8 mt-20'>
-    <div className='col-span-5 flex flex-col items-center justify-cneter xl:col-span-4 md:order-2 md:col-span-8'>
-        <p className='font-mono font-medium my-20 flex items-center justify-center'>I received goodies from GeeksforGeeks for earning Geek Bits through consistent problem-solving, which further motivates me to tackle challenges daily.</p>
-    </div>
-    <div className='flex justify-end col-span-3 h-full w-full row-span-3 relative rounded-full bg-light p-4 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8 '>
-        <Image src={profile1} alt="Codebucks" className='w-60px h-60px xl:w-40 xl:h-40 rounded-full object-cover' priority />
-    </div>
-</div>
-<h2 className='font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16 font-mono'>Trainings</h2>
+       
+<h2 className='font-bold text-6xl mt-20 mb-32 w-full text-center md:text-5xl xs:text-4xl md:mb-16 font-mono'>Trainings</h2>
       <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
-        <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light
+        <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-light
         md:w-[2px] md:left-[30px] xs:left-[20px]' />
         <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2 font-mono'>
           <Details
@@ -247,38 +240,16 @@ const Articles = () => {
         </ul>
       </div>
 
-          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32 font-mono">Achievements</h2>
+          <h2 className="font-bold text-6xl w-full text-center my-16 mt-32 md:text-5xl font-mono">Platform Achievements</h2>
           <ul>
-            <Article
-              title="Ranked 1715 in GeeksForGeeks weekly contest 117"
-              date="March 22, 2023"
-              link="/"
-              img={article3} />
-            <Article
-              title="Earned 5 badges in Leetcode for my consistency problem solving in DSA."
-              date="March 22, 2023"
-              link="/"
-              f = '1'/>
-            <Article
-              title="Achieved Level4 in CodingNinjas Slayground"
-              date="March 22, 2023"
-              link="/"
-              img={article5} />
-            <Article
-              title="Recieved certificate from FFE for being an outstanding mentee."
-              date="March 22, 2023"
-              link="/"
-              img={article6} />
-            <Article
-              title="Ranked 5713 in LeetCode weekly contest 385"
-              date="March 22, 2023"
-              link="/"
-              img={article4} />
-              <Article
-              title="Earned 10 Achiever badge and 3 Specialist badge in Coding Ninjas"
-              f='2'
-              link="/"
-               />
+          <div className="flex items-center justify-center">
+  <Image src={img1} alt="Image 1" className="w-20 h-20 mr-2" />
+  <Image src={img2} alt="Image 2" className="w-20 h-20 mr-2" />
+  <Image src={img3} alt="Image 3" className="w-20 h-20 mr-2" />
+  <Image src={img4} alt="Image 4" className="w-20 h-20 mr-2" />
+  <Image src={img5} alt="Image 5" className="w-20 h-20" />
+</div>
+<p className='flex justify-center mt-4'>Leetcode Badges</p>
           </ul>
           
         </Layout>

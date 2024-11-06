@@ -58,7 +58,7 @@ const NavBar = () => {
         <CustomLink href="/articles" title="Coding" className='ml-5 font-mono'/>
       </nav>
      <nav className='flex items-center justify-center flex-wrap'>
-        <motion.a href='https://github.com/2126ReshmaB' target={"_blank"}
+        <motion.a href='https://x.com/BReshma123' target={"_blank"}
         whileHover={{y:-2}} whileTap={{scale:0.9}}className="w-6 mr-3"><TwitterIcon /></motion.a>
         <motion.a href='https://github.com/2126ReshmaB' target={"_blank"}
         whileHover={{y:-2}} whileTap={{scale:0.9}}className="w-6 mx-3"><GithubIcon /></motion.a>

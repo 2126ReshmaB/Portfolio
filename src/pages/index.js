@@ -26,23 +26,23 @@ export default function Home() {
               {/* <p className='text-4xl xl:text-3xl lg:text-center lg:text-4xl md:!text-3xl sm:text-2xl'>Reshma</p> */}
             </div>
             <div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
-              <AnimatedText text="Hi, I'm Reshma" className='!text-4xl !text-left
+              <AnimatedText text="Welcome to my Portfolio!" className='!text-4xl !text-left
               xl:!text-3xl lg:!text-center lg:!text-4xl md:!text-3xl sm:!text-2xl font-mono' />
               
-              <p className='my-4 text-base font-medium md:text-sm sm:text-xs font-mono'>A Final-year Computer Science and Engineering student at R.M.K Engineering College and an FFE scholar, I&apos;m passionate about full-stack and app development. I&apos;m always learning and pushing myself to tackle new challenges.</p>
+              <p className='my-4 text-base font-medium md:text-sm sm:text-xs font-mono'>I&apos;m a final-year Computer Science and Engineering student at R.M.K. Engineering College and an Amazon Future Engineer Scholar. My interests lie in full-stack development, blockchain, and Spring Boot development. I&apos;m committed to continuous learning and thrive on tackling new challenges to deepen my skills and expertise.</p>
               <p className='my-4 text-base font-medium md:text-sm sm:text-xs font-mono'>Want to see what I&apos;m up to? Dive into my portfolio and explore my journey!</p>
           <div className="flex items-center self-start mt-2 lg:self-center">
-            <Link href="/Reshma_Resume (1).pdf" target={"_blank"}
+            <Link href="/Reshma_Resume (5) (1).pdf" target={"_blank"}
             className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
             download={true}>Resume <LinkArrow className={"w-6 ml-1 font-mono"}/>
             </Link>
-            <Link href="resh21331.cs@rmkec.ac.in" target={"_blank"}
+            <Link href="reshma251003@gmail.com" target={"_blank"}
             className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base font-mono">Contact</Link>
           </div>
             </div>
           </div>
         </Layout>
-        <HireMe />
+        {/* <HireMe /> */}
         <div className='absolute right-8 bottom-8 inline-block w-24 md:hidden'>
           <Image src={lightBulb} alt="Codebucks" className='w-full h-auto'/>
         </div>
