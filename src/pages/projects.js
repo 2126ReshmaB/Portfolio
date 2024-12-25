@@ -11,6 +11,8 @@ import project4 from "../../public/images/projects/project4.png";
 import project5 from "../../public/images/projects/project5.png";
 import project6 from "../../public/images/projects/project6.png";
 import project7 from "../../public/images/projects/project7.png";
+import project8 from "../../public/images/projects/project8.png";
+import project9 from "../../public/images/projects/project9.png";
 import Dapp from "../../public/images/projects/Dapp.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -144,6 +146,27 @@ const projects = () => {
                 github="https://github.com/2126ReshmaB/Bling-Supporting-System-using-Tensorflow-API.git"
                  />
             </div>
+
+            <div className='col-span-6 sm:col-span-12'>
+              <Project
+                img={project8}
+                title="NextJs"
+                summary="Promptopia is a modern web application built with Next.js for sharing and exploring creative prompts."
+                link="/"
+                github="https://github.com/2126ReshmaB/Promptopia_nextjs.git"
+              />
+            </div>
+
+            <div className='col-span-6 sm:col-span-12'>
+              <Project
+                img={project9}
+                title="TailwindCSS"
+                summary="A honey application built with TailwindCSS and ReactJS."
+                link="/"
+                github="https://github.com/2126ReshmaB/HoneyApp-TailwindCSS.git"
+              />
+            </div>
+
             <div className='col-span-6 sm:col-span-12'>
               <Project
                 img={project6}
